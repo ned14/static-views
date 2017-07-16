@@ -1,4 +1,4 @@
-<testcase name=nested>
+<testcase name=binary_search>
   <os>posix</os>
   <toolset>clang-5.0.0</toolset>
   <status>
