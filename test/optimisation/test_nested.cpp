@@ -17,7 +17,7 @@
 namespace {
 
 template <class R>
-BOOST_FORCEINLINE
+BOOST_STATIC_VIEWS_FORCEINLINE
 constexpr auto assert_all(R rng)
 {
     auto const end = rng.end();
@@ -28,7 +28,7 @@ constexpr auto assert_all(R rng)
 
 
 template <std::size_t... Is, std::size_t... Js>
-BOOST_FORCEINLINE
+BOOST_STATIC_VIEWS_FORCEINLINE
 constexpr auto create_impl(std::index_sequence<Is...>, std::index_sequence<Js...>)
 {
     std::size_t xs[] = { Is... };
@@ -45,7 +45,7 @@ constexpr auto create_impl(std::index_sequence<Is...>, std::index_sequence<Js...
 
 
 template <std::size_t N, std::size_t M>
-BOOST_FORCEINLINE
+BOOST_STATIC_VIEWS_FORCEINLINE
 constexpr auto create()
 {
     return create_impl(std::make_index_sequence<N>{},

@@ -7,41 +7,27 @@
 #ifndef BOOST_STATIC_VIEWS_DETAIL_UTILS_HPP
 #define BOOST_STATIC_VIEWS_DETAIL_UTILS_HPP
 
-#include <boost/config.hpp>
-#include <boost/static_views/detail/config.hpp>
+#include "config.hpp"
 
 BOOST_STATIC_VIEWS_BEGIN_NAMESPACE
 
-namespace detail {
-
-namespace utils {
-
-constexpr auto all() noexcept -> bool
+namespace detail
 {
-    return true;
-}
 
-template <class... Bools>
-constexpr auto all(bool const x, Bools... xs) noexcept -> bool
-{
-    return x && all(xs...);
-}
+  namespace utils
+  {
 
+    constexpr auto all() noexcept -> bool { return true; }
 
-} // end namespace utils
-
-} // end namespace detail
+    template <class... Bools> constexpr auto all(bool const x, Bools... xs) noexcept -> bool { return x && all(xs...); }
 
 
+  }  // end namespace utils
 
+}  // end namespace detail
 
 
 BOOST_STATIC_VIEWS_END_NAMESPACE
 
 
-
-
-
-
-#endif // BOOST_STATIC_VIEWS_DETAIL_UTILS_HPP
-
+#endif  // BOOST_STATIC_VIEWS_DETAIL_UTILS_HPP

@@ -16,7 +16,7 @@
 namespace {
 
 template <class Slice, class T>
-// BOOST_FORCEINLINE
+// BOOST_STATIC_VIEWS_FORCEINLINE
 BOOST_STATIC_VIEWS_CONSTEXPR auto bsearch_impl(Slice&& ys, T const& x) 
     -> std::size_t
 {
@@ -34,7 +34,7 @@ BOOST_STATIC_VIEWS_CONSTEXPR auto bsearch_impl(Slice&& ys, T const& x)
 }
 
 template <class View, class T>
-BOOST_FORCEINLINE
+BOOST_STATIC_VIEWS_FORCEINLINE
 BOOST_STATIC_VIEWS_CONSTEXPR auto bsearch(View&& ys, T const& x)
     -> std::size_t
 {
